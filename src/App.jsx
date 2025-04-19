@@ -31,7 +31,7 @@ function App() {
     });
     setArmy(army.filter((b) => b.id !== id));
     setBots(bots.filter((b) => b.id !== id));
-    console.log("dicharged", id)
+    
     
   }
 
