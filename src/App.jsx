@@ -9,7 +9,7 @@ function App() {
   
 
   useEffect(() => {
-    fetch("http://localhost:3000/bots")
+    fetch("https://botbattlr-json.onrender.com/bots")
     .then(res => res.json())
     .then(data => setBots(data))
   },[])
@@ -23,14 +23,14 @@ function App() {
     setArmy(army.filter(b => b.id !== bot.id));
   }
   const dischargeBot = (id) =>{
-    // fetch(`http://localhost:3000/bots/${id}`, {
-    //   method: "DELETE",
-    //   headers:{
-    //     "Content-Type":"application/json"
-    //   }
-    // });
-    // setArmy(army.filter((b) => b.id !== id));
-    // setBots(bots.filter((b) => b.id !== id));
+    fetch(`https://botbattlr-json.onrender.com/bots/${id}`, {
+      method: "DELETE",
+      headers:{
+        "Content-Type":"application/json"
+      }
+    });
+    setArmy(army.filter((b) => b.id !== id));
+    setBots(bots.filter((b) => b.id !== id));
     console.log("dicharged", id)
     
   }
