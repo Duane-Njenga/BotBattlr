@@ -1,6 +1,6 @@
 import "../App.css"
 
-function BotCard({bot, enlistBot}){
+function BotCard({bot, onClick, onDelete, inArmy}){
     const {name, health, damage, armor,bot_class,avatar_url} = bot
     return(
         <div className="border-4 border-white rounded-2xl shadow-lg shadow-black w-70">

@@ -9,7 +9,8 @@ function BotCollection({bots, enlistBot}){
             {bots.map((bot, index) => (
                 <BotCard key={index} 
                 bot = {bot}
-                oncliCK ={() => enlistBot(bot)}
+                onClicK ={() => enlistBot(bot)}
+                inArmy ={false}
                 />
             ))}
 
