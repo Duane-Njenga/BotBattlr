@@ -11,7 +11,22 @@ function BotCard({bot, onClick, onDelete, inArmy}){
             <p>Damage:{damage}</p>
             <p>Armor:{armor}</p>
             <p>Class:{bot_class}</p>
+            {/* {console.log(inArmy)} */}
+           {inArmy ? 
+           <button
+           className="w-full bg-orange-400 hover:bg-orange-500"
+           onClick={onClick}
+           >
+            Release</button>
+           :
+           <button
+           
+           className="bg-green-400 w-full hover:bg-green-700"
+           onClick={onClick}>Enlist</button>
+            }
+
             <button
+            onClick={onDelete}
             title="Discharge"
             className="w-full bg-red-600 text-white hover:bg-red-700 rounded-lg"
             >X</button>

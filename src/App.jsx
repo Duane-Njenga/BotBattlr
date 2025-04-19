@@ -20,7 +20,7 @@ function App() {
     }
   }
   const releaseBot = (bot) => {
-    setArmy(army.flter(b => b.id !== bot.id));
+    setArmy(army.filter(b => b.id !== bot.id));
   }
   const dischargeBot = (id) =>{
     fetch(`http://localhost:3000/bots/${id}`, {
@@ -37,7 +37,10 @@ function App() {
   return (
     <>
     <h1>BotBattlr</h1>
-    <YourBotArmy army={army} setArmy={setArmy}/>
+    <YourBotArmy army={army} 
+    setArmy={setArmy}
+    dischargeBot={dischargeBot}
+    releaseBot={releaseBot}/>
 
     <BotCollection 
     bots = {bots}
