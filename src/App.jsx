@@ -23,14 +23,16 @@ function App() {
     setArmy(army.filter(b => b.id !== bot.id));
   }
   const dischargeBot = (id) =>{
-    fetch(`http://localhost:3000/bots/${id}`, {
-      method: "DELETE",
-      headers:{
-        "Content-Type":"application/json"
-      }
-    });
-    setArmy(army.filter((b) => b.id !== id));
-    setBots(bots.filter((b) => b.id !== id));
+    // fetch(`http://localhost:3000/bots/${id}`, {
+    //   method: "DELETE",
+    //   headers:{
+    //     "Content-Type":"application/json"
+    //   }
+    // });
+    // setArmy(army.filter((b) => b.id !== id));
+    // setBots(bots.filter((b) => b.id !== id));
+    console.log("dicharged", id)
+    
   }
 
 
@@ -39,12 +41,13 @@ function App() {
     <h1>BotBattlr</h1>
     <YourBotArmy army={army} 
     setArmy={setArmy}
-    dischargeBot={dischargeBot}
     releaseBot={releaseBot}/>
 
     <BotCollection 
     bots = {bots}
-    enlistBot={enlistBot}/>
+    enlistBot={enlistBot}
+    dischargeBot={dischargeBot}
+    />
 
 
     </>

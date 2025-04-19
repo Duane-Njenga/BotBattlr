@@ -1,7 +1,7 @@
 import React from "react";
 import BotCard from "./BotCard";
 
-function BotCollection({bots, enlistBot}){
+function BotCollection({bots, enlistBot, dischargeBot}){
     return(
     <>
          <h2 className="text-center font-bold text-2xl underline underline-offset-1 ">Bot Collection</h2>
@@ -11,6 +11,7 @@ function BotCollection({bots, enlistBot}){
                 bot = {bot}
                 onClick ={() => enlistBot(bot)}
                 inArmy ={false}
+                dischargeBot={dischargeBot}
                 />
             ))}
 

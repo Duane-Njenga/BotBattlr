@@ -1,6 +1,6 @@
 import "../App.css"
 
-function BotCard({bot, onClick, onDelete, inArmy}){
+function BotCard({bot, onClick, dischargeBot, inArmy}){
     const {name, health, damage, armor,bot_class,avatar_url} = bot
     return(
         <div className="border-4 border-white rounded-2xl shadow-lg shadow-black w-70">
@@ -26,7 +26,7 @@ function BotCard({bot, onClick, onDelete, inArmy}){
             }
 
             <button
-            onClick={onDelete}
+            onClick={() => dischargeBot(bot.id)}
             title="Discharge"
             className="w-full bg-red-600 text-white hover:bg-red-700 rounded-lg"
             >X</button>
