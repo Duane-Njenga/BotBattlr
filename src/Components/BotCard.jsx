@@ -11,7 +11,6 @@ function BotCard({bot, onClick, dischargeBot, inArmy}){
             <p>Damage:{damage}</p>
             <p>Armor:{armor}</p>
             <p>Class:{bot_class}</p>
-            {/* {console.log(inArmy)} */}
            {inArmy ? 
            <button
            className="w-full bg-orange-400 hover:bg-orange-500"

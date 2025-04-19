@@ -31,7 +31,7 @@ function App() {
     });
     setArmy(army.filter((b) => b.id !== id));
     setBots(bots.filter((b) => b.id !== id));
-    
+
     
   }
 
@@ -41,7 +41,9 @@ function App() {
     <h1>BotBattlr</h1>
     <YourBotArmy army={army} 
     setArmy={setArmy}
-    releaseBot={releaseBot}/>
+    releaseBot={releaseBot}
+    dischargeBot={dischargeBot}
+    />
 
     <BotCollection 
     bots = {bots}

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import BotCard from "./BotCard";
 
-function YourBotArmy({army, releaseBot}){
+function YourBotArmy({army, releaseBot,dischargeBot}){
     
     return(
         <div>
@@ -15,6 +15,9 @@ function YourBotArmy({army, releaseBot}){
                     key={index}
                     bot={bot}
                     onClick={() => releaseBot(bot)}
+                    dischargeBot = {dischargeBot}
+                    
+
                     inArmy ={true}/>
                 ))}
             </div>
