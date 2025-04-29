@@ -14,7 +14,8 @@ Users can browse through a collection of bots, enlist them into their army, rele
 - React
 - Tailwind CSS
 - JavaScript
-- JSON to hold bot data
+- JSON to hold bot data with a db.json filehosted on render
+
 
 Component Structure
 
