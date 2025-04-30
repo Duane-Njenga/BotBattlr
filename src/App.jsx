@@ -13,7 +13,7 @@ function App() {
     .then(res => res.json())
     .then(data => setBots(data))
   },[])
-  if(!bots)return <h1>Loading...</h1>
+  if(bots.length === 0)return <h1>Loading...</h1>
   
   const enlistBot = (bot) => {
     if(!army.find((b) => b.id === bot.id)){
